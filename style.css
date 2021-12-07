@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Twenty Twenty-One child
+Theme URI: https://wordpress.org/themes/twentytwentyone/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Template: twentytwentyone
+Description: Twenty Twenty-One child is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyone
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+*/
+
+.container {
+    max-width: 66%;
+    margin: 0 auto;
+}
+
+/* Card */
+.card {
+    height: 400px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    border: 4px solid #b0215e;
+    margin-bottom: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 768px) {
+    .card {
+      height: 500px;
+    }
+  }
+  
+  .inner {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+  @media (min-width: 768px) {
+    .inner {
+      width: 50%;
+      height: 100%;
+    }
+  }
+  
+  .title {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    color: #181818;
+    text-shadow: 0px 2px 2px #a6f8d5;
+    position: relative;
+    margin: 0 0 20px 0;
+  }
+  @media (min-width: 768px) {
+    .title {
+      font-size: 30px;
+    }
+  }
+  
+  .subtitle {
+    color: #1f1f1f;
+    text-align: left;
+  }
+
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .footerLink {
+    margin-right: 12px;
+    color: #181818;
+    text-decoration: none;
+    position: relative;
+  }
+  .footerLink:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(176, 33, 94, 0.3);
+    left: 0;
+    bottom: 0;
+  }
+  .footerLink:last-child {
+    margin-right: 0;
+  }
+
+  /*Reformatting card*/
+
+  h3.portfolio-front-page-latest{
+    padding: 0.2em;
+    font-size: 3.2em;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 1.2rem;
+  }
+
+  .row.flex-box-card{
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .flex-box-card-item{
+    width: 48%;
+    margin-bottom: 1.6rem;
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+.subtitle {
+    color: #090708;
+    text-align: left;
+    font-size: 0.775em;
+}
+
+.main-attribute-portfolio{
+    font-size: 0.8em;
+    margin-top: 1.2rem;
+    color: #090708;
+    width: 100%;
+}
+
+.flex-box-card-item:active{
+    background-size: contain;
+}
