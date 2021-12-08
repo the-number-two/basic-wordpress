@@ -74,5 +74,5 @@ function your_prefix_register_post_type() {
 	register_post_type( 'portfolio', $args );
 }
 
-/* taxonomies are registered on Metabox Dashboard */
+/* Registering Taxonomy for Portfolio */
 

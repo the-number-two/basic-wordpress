@@ -4,8 +4,33 @@ get_header();
 
 $theId = get_the_ID();
 
-
+//Getting Settings
+$mainGroupOptionHome = rwmb_meta( 'main_section_home_page_option', ['object_type' => 'setting'], 'main menu option' );
 ?>
+<? 
+
+  foreach( $mainGroupOptionHome as $mainHomeOption){ 
+  $layoutChoose = $mainHomeOption['select_home_section_layout'];  
+  
+?>
+<div class="container">
+  <div class="row row-flex-right-container <?echo $layoutChoose;?>">
+    <div class="left-col-right-content-wrapper">
+      <div class="heading-section-container">
+        <h2><? echo $mainHomeOption['home_section_title']  ; ?></h2>
+        <h3><? echo $mainHomeOption['main-sub-title-section-option'] ; ?></h3>
+      </div>
+      <div class="text-content">
+      <p class="inner-text">  <? echo $mainHomeOption['main_content_option_home'] ;  ?></p>
+      </div>  
+    </div>
+    <div class="right-col-right-content-wrapper">
+      <? $featOptionSectionHomeImg = $mainHomeOption['main_section_featured_image']; ?>
+      <img src="<? echo  wp_get_attachment_url($featOptionSectionHomeImg[0]) ;?>" alt="">
+    </div>
+  </div>
+</div>
+<? } ?>
 <div class="container">
     <h3 class="portfolio-front-page-latest">Latest Posts</h3>
     <div class="row row-flex-front-page-blog">
