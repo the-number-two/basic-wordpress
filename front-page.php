@@ -7,6 +7,38 @@ $theId = get_the_ID();
 
 ?>
 <div class="container">
+    <h3 class="portfolio-front-page-latest">Latest Posts</h3>
+    <div class="row row-flex-front-page-blog">
+      <?php 
+        $argsPosts = array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => -1,
+      );
+      $getAllPosts = get_posts( $argsPosts );
+      ?>
+
+      <?php foreach( $getAllPosts as $post ){ 
+        $postFeatImage = get_the_post_thumbnail_url( $post->ID , 'post-thumbnail' );  
+        
+      ?>
+
+      <div class="card-blog-front-page">
+        <div class="card__header-blog-front-page">
+          <img src="<? echo $postFeatImage; ?>" alt="card__image" class="card__image-blog-front-page">
+        </div>
+        <div class="card__body-blog-front-page">
+          <span class="tag tag-blue"><?php echo $post->ID; ?></span>
+          <h4><? echo $post->post_title; ?></h4>
+          <p class="main-card-paragraph"><? echo $post->post_excerpt; ?></p>
+        </div>
+      </div>
+
+      <?php } ?>
+
+    </div>
+</div>
+<div class="container">
     <h3 class="portfolio-front-page-latest">Latest Portfolios</h3>
     <div class="row flex-box-card">
         <?
