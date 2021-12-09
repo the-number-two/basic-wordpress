@@ -6,7 +6,36 @@ $theId = get_the_ID();
 
 //Getting Settings
 $mainGroupOptionHome = rwmb_meta( 'main_section_home_page_option', ['object_type' => 'setting'], 'main menu option' );
+$mainSlideOptionHome = rwmb_meta( 'main_home_option_slider_group', ['object_type' => 'setting'], 'main menu option' );
+$slideArray = $mainSlideOptionHome['slide_creator_group_main'];
+
 ?>
+<div class="container">
+  <div class="owl-carousel owl-theme">
+    <? 
+      foreach($slideArray as $slide){
+        $slideImgId = $slide['slide_image_opt_home'];
+        $slideImgUrl = wp_get_attachment_image_src($slideImgId[0], 'full');
+        $slideTitle = $slide['title_of_the_slide_opt_home'];
+        $slideSubTitle = $slide['sub_title_slide_opt_home'];
+        $slideDescription = $slide['slide_description_opt_home'];
+        ?>
+          <div class="item">
+            <img src="<? echo $slideImgUrl[0]; ?>" alt="" srcset="">
+            <div class="desc-container-slider">
+              <h4><? echo $slideTitle ; ?></h4>
+              <h5><? echo $slideSubTitle; ?></h5>
+              <p><?  echo $slideDescription; ?></p>
+            </div>
+          </div>
+        <?php
+
+      }
+      
+    ?>
+  </div>
+</div>
+
 <? 
 
   foreach( $mainGroupOptionHome as $mainHomeOption){ 

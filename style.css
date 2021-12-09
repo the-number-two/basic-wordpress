@@ -286,3 +286,38 @@ p.inner-text {
 .right-col{
   flex-direction: row-reverse !important;
 }
+
+#masthead{
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.owl-prev,.owl-next{
+background:none;
+}
+
+.item img {
+  max-height: 540px;
+  object-fit: cover;
+}
+
+.site .button:not(:hover):not(:active):not(.has-background),
+button:not(:hover):not(:active):not(.has-background), 
+input[type=submit]:not(:hover):not(:active):not(.has-background), 
+input[type=reset]:not(:hover):not(:active):not(.has-background), 
+.wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-background),
+.wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background),
+.wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+  background-color: transparent !important;
+}
+
+.desc-container-slider {
+  position: absolute;
+  display: block;
+  bottom: 15%;
+  left: 5%;
+  width: 50%;
+  background: #000000ba;
+  padding: 1.9em;
+}
